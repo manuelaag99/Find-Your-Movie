@@ -1,9 +1,9 @@
-  const APILINK = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=c446c717e08f28e130b7014181197b2b&page=1';
-  const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
-  const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=c446c717e08f28e130b7014181197b2b&query=";
+const APILINK = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=41ee980e4b5f05f6693fda00eb7c4fd4&page=1';
+const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
+const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=41ee980e4b5f05f6693fda00eb7c4fd4&query=";
 
 
-  const main = document.getElementById("section");
+  const main = document.getElementById("movies");
   const form = document.getElementById("form");
   const search = document.getElementById("query");
 
@@ -28,14 +28,11 @@ returnMovies(APILINK)
         
         const title = document.createElement('h3');
         title.setAttribute('id', 'title');
-        
-        const center = document.createElement('center');
   
         title.innerHTML = `${element.title}`;
         image.src = IMG_PATH + element.poster_path;
   
         center.appendChild(image);
-        div_card.appendChild(center);
         div_card.appendChild(title);
         div_column.appendChild(div_card);
         div_row.appendChild(div_column);
